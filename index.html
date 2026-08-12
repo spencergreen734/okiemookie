@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OkieMookie — Learn. Create. Collect.</title>
+<meta name="description" content="OkieMookie is a K-pop inspired creative home: BandLab music production lessons, curated photocards & merch, and a community for producers &amp; collectors.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true" id="cursorGlow"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">OM</span>
+      <span class="brand-word">Okie<em>Mookie</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#shop">Shop</a>
+      <a href="#community">Community</a>
+      <a href="#contact" class="nav-cta">Get In Touch</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <video
+      class="hero-video"
+      autoplay muted loop playsinline preload="auto"
+      poster="assets/hero-poster.jpg"
+      id="heroVideo">
+      <source src="assets/Myvideo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-scrim"></div>
+    <div class="hero-scrim-left"></div>
+  </div>
+
+  <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal">🎧&nbsp; welcome to the studio</p>
+    <h1 class="hero-title reveal">
+      Okie<span class="hero-title-accent">Mookie</span>
+    </h1>
+    <p class="hero-tagline reveal">Learn. Create. Collect.</p>
+    <p class="hero-sub reveal">
+      A bedroom-studio-to-big-dreams kind of place — learn to produce
+      K-pop-style tracks on BandLab, cop rare photocards, and grow with
+      people who get the obsession.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#lessons" class="btn btn-primary">Start Making Music</a>
+      <a href="https://www.mercari.com/u/snextdoor_photocards/" target="_blank" rel="noopener" class="btn btn-ghost">
+        Shop Photocards <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <audio id="bgMusic" preload="none"></audio>
+
+  <button class="sound-toggle" id="soundToggle" aria-label="Toggle background music">
+    <svg id="soundIconOff" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5 6 9H3v6h3l5 4V5Z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a9 9 0 0 1 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0"/><path d="M16.5 9 21 15M21 9l-4.5 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <svg id="soundIconOn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none"><path d="M11 5 6 9H3v6h3l5 4V5Z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a9 9 0 0 1 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <span id="soundLabel">tap for sound</span>
+  </button>
+
+  <p class="hero-credit"><span id="heroCreditText">Song by FIFTY FIFTY &middot; Cover by OkieMookie</span></p>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>PHOTOCARDS</span><span class="dot">✦</span>
+    <span>BANDLAB BEATS</span><span class="dot">✦</span>
+    <span>K-POP COMMUNITY</span><span class="dot">✦</span>
+    <span>SHOPIFY: COMING SOON</span><span class="dot">✦</span>
+    <span>PHOTOCARDS</span><span class="dot">✦</span>
+    <span>BANDLAB BEATS</span><span class="dot">✦</span>
+    <span>K-POP COMMUNITY</span><span class="dot">✦</span>
+    <span>SHOPIFY: COMING SOON</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <div class="about-frame">
+        <img src="assets/hero-poster.jpg" alt="OkieMookie brand art — a silhouette walking with headphones on, surrounded by music notes and florals" loading="lazy">
+        <span class="tape tape-1">est. 2026</span>
+      </div>
+      <div class="about-blob" aria-hidden="true"></div>
+    </div>
+
+    <div class="about-copy">
+      <p class="kicker reveal">the story so far</p>
+      <h2 class="reveal">One bedroom studio.<br>One big dream.</h2>
+      <p class="reveal">
+        OkieMookie started as a love letter to K-pop — late nights on BandLab
+        chasing the perfect drop, and a growing stash of photocards too
+        good not to share. What began as a personal obsession is turning
+        into a full creative home.
+      </p>
+      <p class="reveal">
+        Today that means production lessons and a photocard shop.
+        Tomorrow it's a full Shopify storefront and a Skool community
+        where producers and collectors grow together. You're getting in
+        on the ground floor.
+      </p>
+      <div class="stat-row reveal">
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">self-taught &amp; DIY</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">BandLab</span>
+          <span class="stat-label">no expensive gear needed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">1:1</span>
+          <span class="stat-label">personal attention</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LESSONS ============ -->
+<section class="lessons" id="lessons">
+  <div class="container">
+    <p class="kicker kicker-light reveal">learn the craft</p>
+    <h2 class="section-title reveal">Make your own K-pop-style tracks — on BandLab, from scratch.</h2>
+    <p class="section-sub reveal">
+      No studio, no problem. Everything's taught on BandLab so you can
+      start producing from your phone or laptop today.
+    </p>
+
+    <div class="lesson-grid">
+      <div class="lesson-card reveal">
+        <span class="lesson-num">01</span>
+        <h3>Beat Making Basics</h3>
+        <p>Drum patterns, chord progressions, and building a groove that actually bounces.</p>
+      </div>
+      <div class="lesson-card reveal">
+        <span class="lesson-num">02</span>
+        <h3>Vocal Chops &amp; Hooks</h3>
+        <p>Turn vocal samples into the earworm hooks K-pop production is known for.</p>
+      </div>
+      <div class="lesson-card reveal">
+        <span class="lesson-num">03</span>
+        <h3>Mixing That Pops</h3>
+        <p>Get your tracks loud, clean, and streaming-ready without pro gear.</p>
+      </div>
+      <div class="lesson-card reveal">
+        <span class="lesson-num">04</span>
+        <h3>1:1 Sessions</h3>
+        <p>Bring your own track and get personal, honest feedback to level it up.</p>
+      </div>
+    </div>
+
+    <div class="lesson-cta reveal">
+      <p>Beginner-friendly &amp; totally judgment-free. Reach out to book a session or ask about pricing.</p>
+      <a href="book.html" class="btn btn-primary">Book a Session</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="shop" id="shop">
+  <div class="container">
+    <div class="shop-head">
+      <div>
+        <p class="kicker reveal">for the collectors</p>
+        <h2 class="section-title reveal">Photocards, merch &amp; more.</h2>
+        <p class="section-sub reveal">
+          Hand-picked photocards and K-pop merch, live right now on Mercari.
+          A dedicated OkieMookie storefront is coming soon on Shopify.
+        </p>
+      </div>
+      <span class="badge reveal">🛍️ Shopify store — coming soon</span>
+    </div>
+
+    <div class="shop-grid">
+      <a href="albums.html" class="shop-card shop-card-link reveal">
+        <div class="shop-card-art shop-art-photo">
+          <img src="assets/album-limited-copies.jpg" alt="BOYNEXTDOOR No Genre Album with photocards" loading="lazy">
+        </div>
+        <h3>Albums</h3>
+        <p>Curated pulls &amp; bundles from your favorite comebacks.</p>
+        <span class="shop-card-cta">View Albums <span class="arrow">→</span></span>
+      </a>
+      <a href="photocards.html" class="shop-card shop-card-link reveal">
+        <div class="shop-card-art shop-art-photo shop-art-photo-portrait">
+          <img src="assets/photocard-taesan-how.jpg" alt="BOYNEXTDOOR Taesan photocard" loading="lazy">
+        </div>
+        <h3>Photocards</h3>
+        <p>Rare finds and fan-favorites, restocked often.</p>
+        <span class="shop-card-cta">View Photocards <span class="arrow">→</span></span>
+      </a>
+      <div class="shop-card reveal">
+        <div class="shop-card-art shop-art-3">
+          <span class="shop-art-soon">Coming Soon</span>
+        </div>
+        <h3>Sleeves &amp; Toploaders</h3>
+        <p>Keep your collection safe, mint, and display-ready.</p>
+      </div>
+    </div>
+
+    <div class="shop-cta reveal">
+      <a href="https://www.mercari.com/u/snextdoor_photocards/" target="_blank" rel="noopener" class="btn btn-primary">
+        Shop the Current Store on Mercari <span class="arrow">↗</span>
+      </a>
+      <span class="shop-cta-note">Everything ships from the OkieMookie storefront on Mercari for now.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMUNITY ============ -->
+<section class="community" id="community">
+  <div class="container community-grid">
+    <div class="community-copy">
+      <p class="kicker kicker-light reveal">coming soon</p>
+      <h2 class="section-title reveal">Join The Circle.</h2>
+      <p class="section-sub reveal">
+        A Skool community built for bedroom producers and photocard
+        collectors — trade cards, share what you're making, and grow
+        with people who actually get it.
+      </p>
+      <ul class="community-list reveal">
+        <li><span>🎛️</span> Weekly beat-making challenges</li>
+        <li><span>🎧</span> Feedback circle for your tracks</li>
+        <li><span>🤝</span> Trade &amp; collector board</li>
+        <li><span>🚀</span> Early access when the doors open</li>
+      </ul>
+    </div>
+
+    <div class="community-card reveal">
+      <div class="community-card-glow" aria-hidden="true"></div>
+      <h3>Get on the list</h3>
+      <p>Be first to know when The Circle opens on Skool.</p>
+      <a href="mailto:okiemookie734@gmail.com?subject=Notify%20me%20-%20The%20Circle&body=Hey!%20Add%20me%20to%20the%20list%20for%20The%20Circle%20on%20Skool." class="btn btn-primary btn-block">Notify Me</a>
+      <p class="community-fineprint">No spam — just one email when it's live.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand">
+        <span class="brand-mark">OM</span>
+        <span class="brand-word">Okie<em>Mookie</em></span>
+      </a>
+      <p>Music lessons, photocards &amp; a community for people who love K-pop as much as you do.</p>
+
+      <a href="https://www.tiktok.com/@idkwhatimdoing7340" target="_blank" rel="noopener" class="tiktok-badge" aria-label="Follow OkieMookie on TikTok">
+        <svg class="badge-ring" viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <path id="tiktokRingPath" d="M60,60 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0" />
+          </defs>
+          <text font-family="'Unbounded', system-ui, sans-serif" font-size="8.6" font-weight="700" letter-spacing="2.5">
+            <textPath href="#tiktokRingPath" startOffset="0%">FOLLOW ON TIKTOK ✦ FOLLOW ON TIKTOK ✦&#160;</textPath>
+          </text>
+        </svg>
+        <span class="badge-center">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16.5 3c.4 2.2 1.9 3.7 4.1 4v3.1c-1.5.1-2.9-.3-4.1-1.1v6.5a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.2a2.4 2.4 0 1 0 1.7 2.3V3h3Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="badge-pulse" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#shop">Shop</a>
+      <a href="#community">Community</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Say hi</h4>
+      <a href="mailto:okiemookie734@gmail.com">okiemookie734@gmail.com</a>
+      <a href="https://www.mercari.com/u/snextdoor_photocards/" target="_blank" rel="noopener">Mercari Store ↗</a>
+      <a href="https://www.tiktok.com/@idkwhatimdoing7340" target="_blank" rel="noopener">TikTok ↗</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> OkieMookie. All rights reserved.</span>
+    <span>Shopify storefront &amp; Skool community launching soon ✦</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

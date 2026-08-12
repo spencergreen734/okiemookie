@@ -1,0 +1,12 @@
+# Raw source video files — large, and not used by the site itself.
+# Only the extracted audio (.m4a/.mp3) and poster/photo images are
+# actually referenced in the HTML/CSS. Keep these locally as originals,
+# but don't ship them to the repo or the live site.
+assets/MySong.mp4
+assets/mysong1.mov
+assets/mysong2.mov
+assets/mysong3.mov
+
+# OS cruft
+.DS_Store
+Thumbs.db
